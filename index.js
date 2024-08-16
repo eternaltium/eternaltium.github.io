@@ -76,13 +76,17 @@ function handleCommand(command) {
     } else if (command === "clear") {
         output.innerHTML = "";
     } else if (command === "about") {
-        write("I'm eternal, 15 and I like to code in LuaU and sometimes HTML");
+        write(`
+        I'm eternal.
+        Age: 15 
+        I like to code in LuaU and sometimes HTML`
+        );
     } else if (command === "quote") {
         write("Never Back down... Never What?                          NEVER BACK DOWN                                                NEVER GIVE UP!                                                (unless ur an obese slob)");
     } else if (command === "projects") {
         write(
         `        c1v1 / roblox - https://discord.gg/hvyMzMeQWD
-        general projects - https://github.com/eternaly1337`
+        general projects - https://github.com/eternaltium`
         );
     } else if (command === "accounts") {
         write(
