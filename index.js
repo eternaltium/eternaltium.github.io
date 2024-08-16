@@ -53,7 +53,7 @@ async function write(text) {
 
 function outputCommand() {
     const input = commandLine.value;
-    const outputString = `\nconsole:  $&nbsp; ${input}`;
+    const outputString = `\nconsole:   ${input}`;
     output.innerHTML += outputString;
     commandLine.value = "";
     window.scrollTo(0, document.body.scrollHeight);
@@ -69,6 +69,7 @@ function handleCommand(command) {
         about - shows info about me (not much)
         quote - motivational quote 
         projects - current projects i'm working on
+        shutdown / reboot - re-directs to my bio page
         
         More commands soon?`;
         write(helpText);
@@ -80,9 +81,9 @@ function handleCommand(command) {
         write("Never Back down... Never What?                          NEVER BACK DOWN                                                NEVER GIVE UP!                                                (unless ur an obese slob)");
     } else if (command === "projects") {
         write(
-            `        c1v1 / roblox - https://discord.gg/hvyMzMeQWD
-            general projects - https://github.com/eternaly1337`
-            );
+        `        c1v1 / roblox - https://discord.gg/hvyMzMeQWD
+        general projects - https://github.com/eternaly1337`
+        );
     } else if (command === "accounts") {
         write(
         `        Discord - @zzzzzzxiiiixzzzzzz : 1222005828954099782
