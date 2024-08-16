@@ -53,7 +53,7 @@ async function write(text) {
 
 function outputCommand() {
     const input = commandLine.value;
-    const outputString = `\naerial@racist.email $&nbsp; ${input}`;
+    const outputString = `\nconsole:  $&nbsp; ${input}`;
     output.innerHTML += outputString;
     commandLine.value = "";
     window.scrollTo(0, document.body.scrollHeight);
@@ -63,38 +63,42 @@ function outputCommand() {
 function handleCommand(command) {
     if (command === "help") {
         const helpText = `Available commands:\n
-        help - displays this help message
+        help - displays this message
         clear - clears the screen
-        accounts - my accounts (always updated)
-        about - shows infos about me (not much)
+        accounts - my accounts (always semi-updated)
+        about - shows info about me (not much)
         quote - motivational quote 
+        projects - current projects i'm working on
         
-        More commands coming soon`;
+        More commands soon?`;
         write(helpText);
     } else if (command === "clear") {
         output.innerHTML = "";
     } else if (command === "about") {
-        write("I'm Eternal, I live at **** ************ ************** ****");
+        write("I'm eternal, 15 and I like to code in LuaU and sometimes HTML");
     } else if (command === "quote") {
         write("Never Back down... Never What?                          NEVER BACK DOWN                                                NEVER GIVE UP!                                                (unless ur an obese slob)");
-    } /*else if (command === "projects") {
-        write("into see more projects check out my github: https://github.com/BajekekButLost");
-    }*/ else if (command === "accounts") {
+    } else if (command === "projects") {
         write(
-            `        Discord - @4tnl
-        Youtube - @eternaly1337 / https://www.youtube.com/@eternaly1337
-        E-z.host - @recelercy / https://e-z.bio/4ke`
+            `        c1v1 / roblox - https://discord.gg/hvyMzMeQWD
+            general projects - https://github.com/eternaly1337`
+            );
+    } else if (command === "accounts") {
+        write(
+        `        Discord - @zzzzzzxiiiixzzzzzz : 1222005828954099782
+        Youtube - @eternaly1337 / https://www.youtube.com/@eternwl
+        E-z.host - @recelercy / https://e-z.bio/eternal`
         );
     } else if (command === "shutdown") {
         write(shutdownText);
         delete inputLine;
         setTimeout(function () {
-            window.location.replace("https://e-z.bio/4ke");
+            window.location.replace("https://e-z.bio/eternal");
         }, 1000);
     } else if (command === "reboot") {
         write(rebootText).then(() => {
             setTimeout(function () {
-                window.location.replace("https://e-z.bio/4ke");
+                window.location.replace("https://e-z.bio/eternal");
             }, 1000);
         });
     } else if (command === "") {
@@ -111,4 +115,3 @@ commandLine.addEventListener("keydown", function (e) {
         outputCommand();
     }
 });
-
